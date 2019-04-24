@@ -14,7 +14,7 @@
     "bot"
   ],
   "author": "fibee",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "telegraf": "^3.29.0",
     "telegraf-calendar-telegram": "^1.5.7"
