@@ -1,0 +1,19 @@
+{
+  "name": "expensesbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "telegram",
+    "bot"
+  ],
+  "author": "fibee",
+  "license": "MIT",
+  "dependencies": {
+    "telegraf": "^3.29.0",
+    "telegraf-calendar-telegram": "^1.5.7"
+  }
+}
