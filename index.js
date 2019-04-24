@@ -9,7 +9,9 @@ const URL = process.env.URL || 'https://expenses-tg-bot.herokuapp.com';
 
 const bot = new Telegraf(API_TOKEN);
 bot.telegram.setWebhook(`${URL}/bot${API_TOKEN}`);
-expressApp.use(bot.webhookCallback(`/bot${API_TOKEN}`));
+bot.startWebhook(`/bot${API_TOKEN}`, null, PORT)
+// bot.telegram.setWebhook(`${URL}/bot${API_TOKEN}`);
+// expressApp.use(bot.webhookCallback(`/bot${API_TOKEN}`));
 
 
 var conn = new jsforce.Connection();
@@ -259,12 +261,12 @@ bot.on('text', (ctx) => {
 
 bot.launch()
 
-expressApp.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-expressApp.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// expressApp.get('/', (req, res) => {
+//   res.send('Hello World!');
+// });
+// expressApp.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
 
 
 
