@@ -1,5 +1,5 @@
 const Telegraf = require('telegraf');
-// var jsforce = require('jsforce');
+var jsforce = require('jsforce');
 const Markup = require('telegraf/markup')
 const Calendar = require('telegraf-calendar-telegram');
 const API_TOKEN = process.env.API_TOKEN || '816160560:AAF6MXIxXmMaURbCAUA2swJLg6hbBymRmqo';
@@ -10,15 +10,14 @@ const URL = process.env.URL || 'https://expenses-tg-bot.herokuapp.com';
 const bot = new Telegraf(API_TOKEN);
 bot.telegram.setWebhook(`${URL}/bot${API_TOKEN}`);
 bot.startWebhook(`/bot${API_TOKEN}`, null, PORT)
-// bot.telegram.setWebhook(`${URL}/bot${API_TOKEN}`);
-// expressApp.use(bot.webhookCallback(`/bot${API_TOKEN}`));
 
 
-// var conn = new jsforce.Connection();
-// conn.login('fibee94@k4.com', '100694Artem', function (err, res) {
-//   if (err) { return console.error(err); }
-//   console.log(res);
-// });
+
+ var conn = new jsforce.Connection();
+ conn.login('fibee94@k4.com', '100694Artem', function (err, res) {
+   if (err) { return console.error(err); }
+   console.log(res);
+ });
 
 let login = new String()
 let password = new String()
@@ -261,12 +260,7 @@ bot.on('text', (ctx) => {
 
 bot.launch()
 
-// expressApp.get('/', (req, res) => {
-//   res.send('Hello World!');
-// });
-// expressApp.listen(PORT, () => {
-//   console.log(`Server running on port ${PORT}`);
-// });
+
 
 
 
