@@ -1,5 +1,5 @@
 const Telegraf = require('telegraf');
-var jsforce = require('jsforce');
+// var jsforce = require('jsforce');
 const Markup = require('telegraf/markup')
 const Calendar = require('telegraf-calendar-telegram');
 const API_TOKEN = process.env.API_TOKEN || '816160560:AAF6MXIxXmMaURbCAUA2swJLg6hbBymRmqo';
