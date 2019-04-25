@@ -14,11 +14,11 @@ bot.startWebhook(`/bot${API_TOKEN}`, null, PORT)
 // expressApp.use(bot.webhookCallback(`/bot${API_TOKEN}`));
 
 
-var conn = new jsforce.Connection();
-conn.login('fibee94@k4.com', '100694Artem', function (err, res) {
-  if (err) { return console.error(err); }
-  console.log(res);
-});
+// var conn = new jsforce.Connection();
+// conn.login('fibee94@k4.com', '100694Artem', function (err, res) {
+//   if (err) { return console.error(err); }
+//   console.log(res);
+// });
 
 let login = new String()
 let password = new String()
