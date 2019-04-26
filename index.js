@@ -2,8 +2,10 @@ const Telegraf = require('telegraf');
 var jsforce = require('jsforce');
 const Markup = require('telegraf/markup')
 const Calendar = require('telegraf-calendar-telegram');
+const express = require('express');
+const expressApp = express();
 const API_TOKEN = process.env.API_TOKEN || '816160560:AAF6MXIxXmMaURbCAUA2swJLg6hbBymRmqo';
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const URL = process.env.URL || 'https://expenses-tg-bot.herokuapp.com';
 
 
@@ -260,15 +262,16 @@ bot.on('text', (ctx) => {
 
 })
 
+
+
+bot.launch()
+
 expressApp.get('/', (req, res) => {
   res.send('Hello World!');
 });
 expressApp.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
-bot.launch()
-
 
 
 
